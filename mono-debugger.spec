@@ -1,5 +1,5 @@
 %define name	mono-debugger
-%define version	0.31
+%define version	0.50
 %define release	%mkrel 1
 %define major 0
 %define libname %mklibname %name %major
@@ -15,7 +15,7 @@ Source0:	http://go-mono.com/sources/mono-debugger/%name-%version.tar.bz2
 Patch1: mono-debugger-0.11-dllmap.patch
 URL:		http://www.go-mono.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
-BuildRequires:	mono-devel > 1.1.15
+BuildRequires:	mono-devel >= 1.2.4
 BuildRequires:	libreadline-devel
 BuildRequires:  termcap-devel
 BuildRequires:	automake1.9

@@ -1,6 +1,6 @@
 %define name	mono-debugger
 %define version	0.60
-%define release	%mkrel 1
+%define release	%mkrel 2
 %define major 0
 %define libname %mklibname %name %major
 %define monodir %_prefix/lib/mono
@@ -20,6 +20,7 @@ BuildRequires:  termcap-devel
 BuildRequires:	automake1.9
 Requires:	mono
 Requires: %libname >= %version
+%define _requires_exceptions libmonodebuggerreadline
 
 %description
 The Mono Debugger

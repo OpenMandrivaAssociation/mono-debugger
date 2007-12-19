@@ -1,5 +1,5 @@
 %define name	mono-debugger
-%define version	0.50
+%define version	0.60
 %define release	%mkrel 1
 %define major 0
 %define libname %mklibname %name %major

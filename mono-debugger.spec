@@ -14,6 +14,7 @@ Group:		Development/Other
 Source0:	http://go-mono.com/sources/mono-debugger/%name-%version.tar.bz2
 Patch1: mono-debugger-0.11-dllmap.patch
 URL:		http://www.go-mono.com/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	mono-devel >= 1.2.4
 BuildRequires:	libreadline-devel
 BuildRequires:  termcap-devel

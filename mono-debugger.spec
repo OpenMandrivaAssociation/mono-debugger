@@ -1,6 +1,6 @@
 %define name	mono-debugger
-%define version	0.60
-%define release	%mkrel 4
+%define version	2.0
+%define release	%mkrel 1
 %define major 0
 %define libname %mklibname %name %major
 %define monodir %_prefix/lib/mono
@@ -9,13 +9,13 @@ Summary:	Mono Debugger
 Name:		%name
 Version:	%version
 Release:	%release
-License:	GPL
+License:	GPLv2+ and MIT
 Group:		Development/Other
 Source0:	http://go-mono.com/sources/mono-debugger/%name-%version.tar.bz2
 Patch1: mono-debugger-0.11-dllmap.patch
 URL:		http://www.go-mono.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
-BuildRequires:	mono-devel >= 1.2.4
+BuildRequires:	mono-devel >= 2.0
 BuildRequires:	libreadline-devel
 BuildRequires:  termcap-devel
 BuildRequires:	automake1.9
@@ -52,13 +52,14 @@ autoconf
 automake-1.9 -a -c
 
 %build
+%define _disable_ld_no_undefined 1
 %configure2_5x
 %make
 
 %install
 rm -rf %{buildroot}
 %makeinstall
-install -m 644 wrapper/mdb.exe.config %buildroot%monodir/1.0/
+install -m 644 wrapper/mdb.exe.config %buildroot%monodir/2.0/
 
 %clean
 rm -rf %{buildroot}
@@ -74,7 +75,7 @@ rm -rf %{buildroot}
 %defattr(-, root, root)
 %{_bindir}/*
 %monodir/*
-%doc AUTHORS README README.build TODO NEWS ChangeLog RELEASE-NOTES*
+%doc AUTHORS README NEWS ChangeLog
 
 %files -n %libname
 %defattr(-, root, root)

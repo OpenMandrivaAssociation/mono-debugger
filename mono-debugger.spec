@@ -1,5 +1,5 @@
 %define name	mono-debugger
-%define version	2.4.2.1
+%define version	2.4.3
 %define release	%mkrel 1
 %define major 0
 %define libname %mklibname %name %major
@@ -52,7 +52,8 @@ autoreconf -fi
 %build
 %define _disable_ld_no_undefined 1
 %configure2_5x
-%make
+#gw parallel build broken in 2.4.3
+make
 
 %install
 rm -rf %{buildroot}

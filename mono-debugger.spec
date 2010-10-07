@@ -1,6 +1,6 @@
 %define name	mono-debugger
 %define version	2.8
-%define release	%mkrel 1
+%define release	%mkrel 2
 %define major 0
 %define libname %mklibname %name %major
 %define monodir %_prefix/lib/mono

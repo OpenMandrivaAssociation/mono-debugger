@@ -16,6 +16,8 @@ Patch1: mono-debugger-2.2-dllmap.patch
 URL:		http://www.go-mono.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	mono-devel >= 2.0
+#gw not required by mono 2.8 anymore:
+BuildRequires:	glib2-devel
 BuildRequires:	libreadline-devel
 BuildRequires:  termcap-devel
 BuildRequires:	automake1.9

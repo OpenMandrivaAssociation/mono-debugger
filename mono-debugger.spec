@@ -1,6 +1,6 @@
 %define name	mono-debugger
 %define version	2.8
-%define release	%mkrel 2
+%define release	%mkrel 3
 %define major 0
 %define libname %mklibname %name %major
 %define monodir %_prefix/lib/mono
@@ -13,6 +13,7 @@ License:	GPLv2+ and MIT
 Group:		Development/Other
 Source0:	http://go-mono.com/sources/mono-debugger/%name-%version.tar.bz2
 Patch1: mono-debugger-2.2-dllmap.patch
+Patch2: mono-debugger-2.8-CVE-2010-3369.diff
 URL:		http://www.go-mono.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 BuildRequires:	mono-devel >= 2.0
@@ -49,6 +50,8 @@ This contains headers and libraries of the Mono Debugger.
 %prep
 %setup -q
 %patch1 -p1 -b .dllmap
+%patch2 -p1 -b .CVE-2010-3369
+
 autoreconf -fi
 
 %build

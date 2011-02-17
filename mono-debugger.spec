@@ -1,5 +1,5 @@
 %define name	mono-debugger
-%define version	2.8.1
+%define version	2.10
 %define release	%mkrel 1
 %define major 0
 %define libname %mklibname %name %major
@@ -15,7 +15,7 @@ Source0:	http://go-mono.com/sources/mono-debugger/%name-%version.tar.bz2
 Patch1: mono-debugger-2.2-dllmap.patch
 URL:		http://www.go-mono.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
-BuildRequires:	mono-devel >= 2.0
+BuildRequires:	mono-devel >= 2.10
 #gw not required by mono 2.8 anymore:
 BuildRequires:	glib2-devel
 BuildRequires:	libreadline-devel

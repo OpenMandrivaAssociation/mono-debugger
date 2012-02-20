@@ -85,7 +85,6 @@ rm -rf %{buildroot}
 %files -n %libname-devel
 %defattr(-, root, root)
 %_libdir/lib*.so
-%attr(644,root,root) %_libdir/lib*a
 %{_libdir}/pkgconfig/*
 
 

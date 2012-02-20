@@ -12,6 +12,7 @@ Release:	%release
 License:	GPLv2+ and MIT
 Group:		Development/Other
 Source0:	http://go-mono.com/sources/mono-debugger/%name-%version.tar.bz2
+Patch0: mono-debugger-2.10-glib-includes.patch
 Patch1: mono-debugger-2.2-dllmap.patch
 URL:		http://www.go-mono.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
@@ -48,7 +49,7 @@ This contains headers and libraries of the Mono Debugger.
 
 %prep
 %setup -q
-%patch1 -p1 -b .dllmap
+%apply_patches
 
 %build
 %define _disable_ld_no_undefined 1

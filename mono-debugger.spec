@@ -10,7 +10,7 @@ Version:	2.10
 Release:	4
 License:	GPLv2+ and MIT
 Group:		Development/Other
-Url:		http://www.go-mono.com/
+Url:		https://www.go-mono.com/
 Source0:	http://go-mono.com/sources/mono-debugger/%{name}-%{version}.tar.bz2
 Patch0:		mono-debugger-2.10-glib-includes.patch
 Patch1:		mono-debugger-2.2-dllmap.patch
